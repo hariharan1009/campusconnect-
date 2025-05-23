@@ -6,19 +6,7 @@ import styles from './page.module.css';
 export default function HomePage() {
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <div className={styles.logo}>CampusConnect</div>
-        <nav className={styles.nav}>
-          <SignedIn>
-            <UserButton afterSignOutUrl="/" />
-          </SignedIn>
-          <SignedOut>
-            <Link href="/sign-in" className={styles.authLink}>Sign In</Link>
-            <Link href="/sign-up" className={styles.authButton}>Sign Up</Link>
-          </SignedOut>
-        </nav>
-      </header>
-
+    
       <main className={styles.main}>
         <SignedOut>
           <section className={styles.hero}>
@@ -42,9 +30,7 @@ export default function HomePage() {
               Welcome back to <span className={styles.highlight}>CampusConnect</span>
             </h1>
             <div className={styles.ctaContainer}>
-              <Link href="/dashboard" className={styles.primaryButton}>
-                Go to Dashboard
-              </Link>
+             
             </div>
           </section>
         </SignedIn>

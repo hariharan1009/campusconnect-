@@ -1,0 +1,102 @@
+/* components/Header.module.css */
+
+.header {
+  background-color: #ffffff; /* White background */
+  border-bottom: 1px solid #e0e0e0; /* Light gray border at the bottom */
+  padding: 1rem 0; /* Vertical padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+.container {
+  max-width: 1200px; /* Maximum width for the content */
+  margin: 0 auto; /* Center the container */
+  display: flex;
+  justify-content: space-between; /* Space out items */
+  align-items: center; /* Vertically align items */
+  padding: 0 1.5rem; /* Horizontal padding for smaller screens */
+}
+
+.logo {
+  font-size: 1.75rem; /* Larger font size for the logo */
+  font-weight: 700; /* Bold font weight */
+  color: #333333; /* Dark gray color */
+  text-decoration: none; /* No underline */
+  margin-right: 2rem; /* Space between logo and other elements */
+}
+
+.primaryButton {
+  background-color: #007bff; /* Primary blue background */
+  color: #ffffff; /* White text color */
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px; /* Slightly rounded corners */
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.primaryButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between navigation items */
+}
+
+.signInLink {
+  color: #007bff; /* Blue color for sign-in link */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.signInLink:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+.signUpButton {
+  background-color: #28a745; /* Green background for sign-up button */
+  color: #ffffff; /* White text color */
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.signUpButton:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Adjustments for the UserButton if needed (Clerk's UserButton uses its own styles) */
+/* You might need to add global styles or use Clerk's styling options to customize it further if default appearance isn't desired. */
+/* For example, if you want to target the wrapper around the UserButton: */
+  /* Add any specific styles for the UserButton container here */
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center items when wrapped */
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 1rem; /* Add space below logo when wrapped */
+    margin-right: 0;
+    width: 100%; /* Make logo take full width */
+  }
+
+  .nav {
+    width: 100%; /* Make navigation take full width */
+    justify-content: center; /* Center nav items */
+    margin-top: 1rem; /* Space above nav when wrapped */
+  }
+
+  .primaryButton {
+    margin-bottom: 1rem; /* Add space below primary button when wrapped */
+  }
+}

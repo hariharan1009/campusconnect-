@@ -1,32 +1,83 @@
+/* Dashboard Layout */
 .dashboard {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem;
 }
 
+/* Welcome Section */
+.welcomeSection {
+  margin-bottom: 2rem;
+}
+
+.welcomeTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #2563eb;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.profileImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+.userName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.userEmail {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Grid Layout */
 .grid {
   display: grid;
   gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .card {
   background: white;
-  border: 1px solid var(--border-color);
-  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
   padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .wideCard {
   grid-column: span 2;
 }
 
+/* Profile Details */
+.profileDetails {
+  margin-top: 1rem;
+}
+
+.profileDetails p {
+  margin-bottom: 0.5rem;
+}
+
+.profileDetails strong {
+  color: #374151;
+  margin-right: 0.5rem;
+}
+
 .mutedText {
-  color: var(--text-muted);
-  margin-top: 0.5rem;
+  color: #6b7280;
 }
